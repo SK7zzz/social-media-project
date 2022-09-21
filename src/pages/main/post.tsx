@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth, db } from '../../config/firebase';
 import { Post as IPost } from './main'
-
+import { DescriptionContainer, LikeButton, LikesContainer, PostContainer, TitleContainer, UsernameContainer } from './main.styles';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 interface Props {
     post: IPost;
 }
@@ -67,27 +68,31 @@ const Post = (props: Props) => {
     useEffect(() => { getLikes() }, [])
 
     return (
-        <div>
-            <div>
+        <PostContainer>
+            <TitleContainer>
                 <h1>
                     {post.title}
                 </h1>
-            </div>
+            </TitleContainer>
 
-            <div>
+            <DescriptionContainer>
                 <p>
                     {post.description}
                 </p>
-            </div>
+            </DescriptionContainer>
 
-            <div>
+            <UsernameContainer>
                 <p>
                     @{post.username}
                 </p>
-                <button onClick={hasUserLiked ? removeLike : addLike}> {hasUserLiked ? <>&#128078</> : <>&#128077</>} </button>
-                {likes && <p>Likes: {likes?.length}</p>}
-            </div>
-        </div>
+            </UsernameContainer>
+            <LikesContainer>
+                <LikeButton onClick={hasUserLiked ? removeLike : addLike}> {hasUserLiked ? <FavoriteIcon color='secondary' /> : <FavoriteIcon />} </LikeButton>
+                {likes?.length !== 0 && <p>{likes?.length}</p>}
+            </LikesContainer>
+
+
+        </PostContainer>
     )
 }
 

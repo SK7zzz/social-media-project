@@ -1,6 +1,7 @@
 import { getDocs, collection, } from "firebase/firestore"
 import { useEffect, useState } from "react"
 import { db } from '../../config/firebase'
+import { MainPageContainer } from "./main.styles"
 import Post from "./post"
 
 export interface Post {
@@ -26,7 +27,9 @@ const Main = () => {
     useEffect(() => { getposts() }, [])
 
     return (
-        <div>{postsList?.map((post) => <Post post={post} />)}</div>
+        <MainPageContainer className="mainpagecontainer">
+            {postsList?.map((post) => <Post post={post} />)}
+        </MainPageContainer>
     )
 }
 
