@@ -28,7 +28,7 @@ const Main = () => {
 
     return (
         <MainPageContainer className="mainpagecontainer">
-            {postsList?.map((post) => <Post post={post} />)}
+            {postsList?.map((post) => <Post key={post.id} post={post} />)}
         </MainPageContainer>
     )
 }

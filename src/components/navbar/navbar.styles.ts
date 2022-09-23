@@ -12,7 +12,7 @@ export const NavbarContainer = styled.div`
     items-center
     bg-gray-900
     px-16
-    h-12
+    h-20
   `}
 `;
 
@@ -31,7 +31,7 @@ export const LinksContainer = styled.div`
 export const CustomLink = styled(Link)`
   ${tw`
     text-white
-    text-sm
+    text-xl
     no-underline
     font-bold
     hover:underline
@@ -53,8 +53,8 @@ export const UserContainer = styled.div`
 
 export const UserPic = styled.img`
   ${tw`
-    h-8
-    w-8
+    h-12
+    w-12
     rounded-full
     ml-4
   `}

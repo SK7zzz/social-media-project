@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
     body {
         ${tw`
         h-full
-        font-family["Quicksand", sans-serif]
+        font-mono
         text-white
         bg-gray-800
         p-0

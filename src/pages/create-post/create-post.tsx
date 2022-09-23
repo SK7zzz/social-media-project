@@ -1,10 +1,11 @@
 import CreateForm from "./create-form"
+import { CreatePostContainer } from "./create-post.styles"
 
 const CreatePost = () => {
     return (
-        <div>
+        <CreatePostContainer>
             <CreateForm></CreateForm>
-        </div>
+        </CreatePostContainer>
     )
 }
 

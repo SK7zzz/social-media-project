@@ -16,7 +16,7 @@ export const PostContainer = styled.div`
     bg-gray-900
     my-16
     w-1/2
-    h-52
+    h-60
   `}
 
   p {
@@ -36,6 +36,7 @@ export const TitleContainer = styled.div`
     flex
     items-center
     justify-center
+    text-xl
   `}
 `;
 export const DescriptionContainer = styled.div`
@@ -46,6 +47,7 @@ export const DescriptionContainer = styled.div`
     flex
     items-center
     justify-center
+    text-xl
   `}
 `;
 
