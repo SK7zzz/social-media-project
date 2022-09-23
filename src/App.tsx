@@ -7,17 +7,20 @@ import styled from "styled-components/";
 import tw from "twin.macro";
 
 const AppContainer = styled.div`${tw`h-full`}`
+const RoutesContainer = styled.div`${tw` flex items-center justify-center w-full h-3/4`}`
 
 function App() {
   return (
     <AppContainer className="App">
       <Router>
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/createpost" element={<CreatePost />} />
-        </Routes>
+        <RoutesContainer className="appcontainer">
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/createpost" element={<CreatePost />} />
+          </Routes>
+        </RoutesContainer>
       </Router>
 
     </AppContainer >

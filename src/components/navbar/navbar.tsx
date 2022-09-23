@@ -26,7 +26,7 @@ const Navbar = () => {
             <UserContainer>
                 {user && (
                     <>
-                        <LogoutButton color="secondary" variant="contained" endIcon={<LogoutIcon />} onClick={signUserOut}>Log Out</LogoutButton>
+                        <LogoutButton size="large" color="secondary" variant="contained" endIcon={<LogoutIcon />} onClick={signUserOut}>Log Out</LogoutButton>
                         <UserPic src={user?.photoURL || ""} width="100" height="100" />
                     </>
                 )}
